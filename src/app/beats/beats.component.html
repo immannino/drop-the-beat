@@ -1,0 +1,7 @@
+<button (click)="pulse()">pulse</button>
+<button (click)="waveAdd(25)">add count</button>
+<button (click)="waveRemove(25)">subtract count</button>
+<button (click)="waveForever(25)">forever</button>
+<div class="flexy">
+  <span class="beat" [id]="getId(i)" *ngFor="let c of chars; let i = index;">{{c}}</span>
+</div>

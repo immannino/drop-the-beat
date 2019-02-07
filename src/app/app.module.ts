@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { BeatsComponent } from './beats/beats.component';
+import { StateService } from './state.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BeatsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ StateService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

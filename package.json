@@ -4,7 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "create404": "cp ./docs/index.html ./docs/404.html",
+    "prebuild": "rm -rf docs",
+    "build": "ng build --prod --aot --output-path docs --base-href \"https://immannino.github.io/drop-the-beat/\"",
+    "postbuild": "npm run create404",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
